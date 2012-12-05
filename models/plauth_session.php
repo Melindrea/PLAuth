@@ -1,8 +1,4 @@
 <?php
-/**
- * User: dOob
- * Date: 30/11/12 @ 21:12
- */
 class PLAuth_Session extends Eloquent{
     public static $table = 'plauth_sessions';
 

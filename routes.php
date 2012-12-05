@@ -1,7 +1,5 @@
 <?php
 
-
-
 Route::get('(:bundle)/login/(:any)', function($token){
     $session = PLAuth_Session::where_token($token)->where_active(0)->first();
     if(!$session){
