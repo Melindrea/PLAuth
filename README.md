@@ -11,10 +11,12 @@ PLauth is a simple authentication where the only input you ask to the user is hi
 ##Installation
 To install, copy the directory in the bundles/ folder.
 Then, add the bundle to the bundles array of your project:
-    'plauth' => array(
-        'auto' => true,
-        'handles' => 'account'
-    )
+<pre>
+'plauth' => array(
+    'auto' => true,
+    'handles' => 'account'
+)
+</pre>
 Set the driver as "plauth" in the config/(:any)/auth.php
 
 ##Notes
