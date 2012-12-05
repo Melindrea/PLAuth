@@ -29,10 +29,10 @@ Create the tables using the artisan migrate tools:
 `php artisan migrate`
 
 Create the 3 views required ('login', 'wait' & 'fail') in your application/views directory and configure the config file to point to them.
-Here is a simple 'login' view:
-<pre>
-    {{ Form::open('account/request') }}
 
+Here is a simple 'login' view:
+<code>
+    {{ Form::open('account/request') }}
         @if(Session::has('error'))
             <p class="error">Error!</p>
         @endif
@@ -46,19 +46,20 @@ Here is a simple 'login' view:
            {{ Form::submit('Request an email to sign-in') }}
         </p>
     {{ Form::close() }}
-</pre>
+</code>
 The 'wait' & 'fail' views are just feedback.
+
 The 'wait' view is called right after the user requested to sign-in.
+
 The 'fail' view is called if an user try to sign-in with a wrong token.
 
 
 ##Usage
-Route '/account/request' will display the login view
-Route '/account/logout' will logout the user
-Route '/account/login/(:any)' will try to authenticate an user with a token
-You can still use Auth methods in your application (Auth::user(), Auth::guest()...)
-You may change the bundle's handle as you please, just change it in the configuration array and all the routes will change.
-
+* Route '/account/request' will display the login view
+* Route '/account/logout' will logout the user
+* Route '/account/login/(:any)' will try to authenticate an user with a token
+* You can still use Auth methods in your application (Auth::user(), Auth::guest()...)
+* You may change the bundle's handle as you please, just change it in the configuration array and all the routes will change.
 
 ##Notes
 This is my first Open Source project, I hope I'm doing everything as it should be. Please tell me if I'm doing something wrong!
