@@ -9,7 +9,7 @@ class Plauth_Create_Sessions_Table {
 	 */
 	public function up()
 	{
-		Schema::create('pla_sessions', function($table){
+		Schema::create('plauth_sessions', function($table){
             $table->increments('id');
             $table->integer('user_id');
             $table->string('token', 64);
@@ -25,7 +25,7 @@ class Plauth_Create_Sessions_Table {
 	 */
 	public function down()
 	{
-		Schema::drop('pla_sessions');
+		Schema::drop('plauth_sessions');
 	}
 
 }
