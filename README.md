@@ -31,7 +31,7 @@ Create the tables using the artisan migrate tools:
 Create the 3 views required ('login', 'wait' & 'fail') in your application/views directory and configure the config file to point to them.
 
 Here is a simple 'login' view:
-<code>
+```
     {{ Form::open('account/request') }}
         @if(Session::has('error'))
             <p class="error">Error!</p>
@@ -46,7 +46,7 @@ Here is a simple 'login' view:
            {{ Form::submit('Request an email to sign-in') }}
         </p>
     {{ Form::close() }}
-</code>
+```
 The 'wait' & 'fail' views are just feedback.
 
 The 'wait' view is called right after the user requested to sign-in.
