@@ -5,12 +5,12 @@ PLauth is a simple authentication where the only input you ask to the user is hi
 
 ##Scenario
 * User request to sign-in by entering his email address (e.g.: /account/request)
-* System create a session and send an email
+* System create a session and send an email to the user
 * User check his mailbox and then click on the link to authenticate himself on the system (e.g.: /account/login/(:token))
 
 ##Installation
 To install, copy the directory in the bundles/ folder.
-Then, add the bundle to the bundles array of your project:
+Then, add the bundle to your project (bundles.php):
 <pre>
 'plauth' => array(
     'auto' => true,
@@ -19,5 +19,9 @@ Then, add the bundle to the bundles array of your project:
 </pre>
 Set the driver as "plauth" in the config/(:any)/auth.php
 
+In the config file, you can modify the view used and where to redirect when the user have signed-in. You can also change the mail texts and headers.
+
 ##Notes
 This is my first Open Source project, I hope I'm doing everything as it should be. Please tell me if I'm doing something wrong!
+
+The mail is sent using the PHP mail() function. When Laravel 4 will be out, I'll use the new Laravel Mail class.
