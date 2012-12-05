@@ -9,7 +9,10 @@ PLauth is a simple authentication where the only input you ask to the user is hi
 * User check his mailbox and then click on the link to authenticate himself on the system (e.g.: /account/login/(:token))
 
 ##Installation
-To install, copy the directory in the bundles/ folder.
+To install this bundle, retrieve it with artisan:
+
+`php artisan bundle:install plauth`
+
 Then, add the bundle to your project (bundles.php):
 <pre>
 'plauth' => array(
@@ -18,6 +21,9 @@ Then, add the bundle to your project (bundles.php):
 )
 </pre>
 Set the driver as "plauth" in the config/(:any)/auth.php
+Create the tables using the artisan migrate tools:
+`php artisan migrate:install`
+`php artisan migrate`
 
 In the config file, you can modify the view used and where to redirect when the user have signed-in. You can also change the mail texts and headers.
 
